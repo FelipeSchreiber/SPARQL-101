@@ -1,0 +1,15 @@
+# What is the full vocabulary for the graph (distinguishing the resource predicates from literal predicates)?
+SELECT DISTINCT ?t ?p ?pType
+WHERE {
+    ?s ?p ?o ;
+        a ?t .
+
+    BIND (
+    COALESCE(
+        IF(isIRI(?o), "Resource Predicate", 1/0),
+        "Literal Predicate"
+        ) AS ?pType
+    )
+}
+GROUP BY ?t ?p ?pType
+ORDER BY ASC(?t) ASC(?p)

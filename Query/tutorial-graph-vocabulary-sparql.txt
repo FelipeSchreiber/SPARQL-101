@@ -1,0 +1,8 @@
+# What is the full vocabulary for the graph?
+SELECT DISTINCT ?t ?p
+WHERE {
+    ?s ?p ?o ;
+        a ?t
+}
+GROUP BY ?t ?p
+ORDER BY ASC(?t) ASC(?p)

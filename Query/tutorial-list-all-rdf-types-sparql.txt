@@ -1,0 +1,7 @@
+# What are the types of things that exist in the graph?
+SELECT DISTINCT ?t
+WHERE {
+    ?s a ?t
+}
+GROUP BY ?t
+ORDER BY ASC(?t)

@@ -1,0 +1,6 @@
+# What are the predicates defined in the graph?
+SELECT DISTINCT ?p
+WHERE {
+    ?s ?p ?o
+}
+ORDER BY ASC(?p)
