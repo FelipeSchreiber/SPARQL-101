@@ -1,0 +1,4 @@
+# Delete statements based on certain patterns, e.g. delete all statements in the database
+DELETE WHERE {
+  ?s ?p ?o
+}

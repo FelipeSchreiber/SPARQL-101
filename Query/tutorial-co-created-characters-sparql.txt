@@ -1,0 +1,9 @@
+# Who are the characters who were co-created?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT DISTINCT ?c
+WHERE {
+    ?c :created_by ?p1 , ?p2 .
+
+    FILTER (?p1 != ?p2)
+}

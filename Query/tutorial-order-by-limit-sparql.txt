@@ -1,0 +1,14 @@
+# Who was the longest living creator?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?p ?age
+WHERE {
+    ?p :born_on ?b ;
+        :died_on ?d .
+
+    BIND(year(?b) AS ?bYear)
+    BIND(year(?d) AS ?dYear)
+    BIND((?dYear - ?bYear) AS ?age)
+}
+ORDER BY DESC(?age)
+LIMIT 1

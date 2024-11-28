@@ -1,0 +1,7 @@
+# How many characters were created by Tex Avery?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT (COUNT(?c) AS ?cCount)
+WHERE {
+    ?c :created_by :Tex_Avery .
+}

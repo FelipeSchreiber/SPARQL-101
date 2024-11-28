@@ -1,0 +1,11 @@
+# Find Looney Tunes characters that don't have a catchphrase
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?c
+WHERE {
+    ?c a :Looney_Tunes_Character .
+
+    FILTER NOT EXISTS {
+        ?c :known_for_catchphrase ?p 
+    }
+}

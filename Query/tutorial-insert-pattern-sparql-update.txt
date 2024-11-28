@@ -1,0 +1,9 @@
+# Insert new statements based on certain patterns, e.g. the predicate 'knows' is a reciprocal relation
+PREFIX : <http://looneytunes-graph.com/>
+
+INSERT {
+    ?c2 :knows ?c1
+}
+WHERE {
+    ?c1 :knows ?c2
+}

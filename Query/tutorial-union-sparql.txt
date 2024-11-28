@@ -1,0 +1,16 @@
+# What is the full list of all the names of things in our dataset? (i.e. names of Looney Tunes characters and names of their creators as a single stacked list)
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?n
+WHERE {
+    {
+        ?c a :Looney_Tunes_Character ;
+            :name ?n .
+    }
+    UNION
+    { 
+        ?c a :Person ;
+            :name ?n .
+    }
+}
+ORDER BY ASC(?n)

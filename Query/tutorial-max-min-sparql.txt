@@ -1,0 +1,8 @@
+# What are the earliest and latest release dates of the Shorts?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT (MIN(?date) AS ?earliest) (MAX(?date) AS ?latest)
+WHERE {
+    ?m a :Short ;
+        :release_date ?date
+}

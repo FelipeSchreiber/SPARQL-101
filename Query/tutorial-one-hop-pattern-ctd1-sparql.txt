@@ -1,0 +1,7 @@
+# Who is Bugs Bunny's creator?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?c
+WHERE {
+    :Bugs_Bunny :created_by ?c
+}

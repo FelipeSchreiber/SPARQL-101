@@ -1,0 +1,14 @@
+# Pull a list of all Looney Tunes character names making sure to remove "Tasmanian Devil" from the list - use of MINUS
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?n
+WHERE {
+    {
+        ?c a :Looney_Tunes_Character ;
+            :name ?n .
+    }
+    MINUS {
+    	?c :name "Tasmanian Devil" .
+    }
+}
+ORDER BY ASC(?n)

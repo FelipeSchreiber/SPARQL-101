@@ -1,0 +1,9 @@
+PREFIX : <http://looneytunes-graph.com/>
+PREFIX mfg: <http://myfavs-graph.com/>
+
+SELECT *
+FROM :Looney_Tunes_Graph
+WHERE {
+    ?s ?p ?o
+}
+LIMIT 10

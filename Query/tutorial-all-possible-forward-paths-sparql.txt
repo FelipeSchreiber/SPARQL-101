@@ -1,0 +1,12 @@
+## What are the possible paths I can take between two nodes (e.g. between Bugs Bunny & Daffy Duck)?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT DISTINCT ?subject ?predicate ?object
+WHERE {
+    VALUES ?start { :Bugs_Bunny }
+    VALUES ?end { :Daffy_Duck }
+    
+    ?start (:|!:)* ?subject .
+    ?subject ?predicate ?object .
+    ?object (:|!:)* ?end
+}

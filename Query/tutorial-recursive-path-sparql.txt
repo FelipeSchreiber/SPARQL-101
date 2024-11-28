@@ -1,0 +1,7 @@
+## Recursive paths - Who knows Taz (directly or transitively) through zero or more occurrences of "knows"?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?c
+WHERE {
+   ?c :knows* :Taz
+}

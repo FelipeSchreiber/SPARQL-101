@@ -1,0 +1,8 @@
+# CONSTRUCT query - Return an RDF sub-graph which contains specific triples patterns (persons and their birth and death dates)
+PREFIX : <http://looneytunes-graph.com/>
+
+CONSTRUCT WHERE {
+    ?p a :Person ;
+        :born_on ?b ;
+        :died_on ?d .
+}

@@ -1,0 +1,21 @@
+# Using BIND, COALESCE and IF
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?n ?result
+WHERE {
+    ?c :made_debut_appearance_in ?m ;
+        :name ?n .
+    ?m :release_date ?d .
+
+    BIND(year(?d) AS ?dYear)
+
+    BIND(
+    COALESCE(
+        IF(?dYear >= 1946 && ?dYear <= 1950, "Released during post-war era", 1/0),
+        IF(?dYear >= 1939 && ?dYear <= 1945, "Released during WW2", 1/0),
+        IF(?dYear >= 1918 && ?dYear <= 1938, "Released during interwar period", 1/0),
+        "Other era"
+        ) AS ?result
+    )
+}
+ORDER BY ASC(?n)

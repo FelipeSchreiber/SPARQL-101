@@ -1,0 +1,16 @@
+# CONSTRUCT query - Return an RDF sub-graph which contains specific triples patterns (persons and their average age)
+PREFIX : <http://looneytunes-graph.com/>
+
+CONSTRUCT {
+    ?p :has_age ?age ;
+       :birth_date ?b .
+}
+WHERE {
+    ?p a :Person ;
+        :born_on ?b ;
+        :died_on ?d .
+
+    BIND(year(?b) AS ?bYear)
+    BIND(year(?d) AS ?dYear)
+    BIND((?dYear - ?bYear) AS ?age)
+}

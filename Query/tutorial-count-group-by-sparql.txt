@@ -1,0 +1,8 @@
+# What is the count of recorded personality traits for each of our Looney Tunes Characters?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?c (COUNT(?pt) AS ?ptCount)
+WHERE {
+    ?c :personality_trait ?pt
+}
+GROUP BY ?c

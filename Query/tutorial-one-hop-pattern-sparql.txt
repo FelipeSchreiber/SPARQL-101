@@ -1,0 +1,7 @@
+# What is Bugs Bunny's name?
+PREFIX : <http://looneytunes-graph.com/>
+
+SELECT ?n
+WHERE {
+    :Bugs_Bunny :name ?n
+}

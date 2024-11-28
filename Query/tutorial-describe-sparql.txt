@@ -1,0 +1,4 @@
+# DESCRIBE query - What are the incoming and outgoing statements for Bugs Bunny?
+PREFIX : <http://looneytunes-graph.com/>
+
+DESCRIBE :Bugs_Bunny
