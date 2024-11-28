@@ -1,0 +1,5 @@
+PREFIX : <http://looneytunes-graph.com/>
+
+:Bugs_Bunny :name "Bugs Bunny" ;
+  :species "Hare" ;
+  :gender "Male" .
