@@ -1,0 +1,7 @@
+PREFIX : <http://looneytunes-graph.com/>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+
+:Bugs_Bunny a :Looney_Tunes_Character ;
+  :name "Bugs Bunny" ;
+  :species "Hare" ;
+  :gender "Male" .
